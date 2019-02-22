@@ -1,0 +1,40 @@
+*{
+  list-style: none;
+  display: block;
+  margin: 0 auto;
+  padding: 0;
+  box-sizing: border-box;
+}
+.stopwatch{
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  width: 30rem;
+  background-color: #353535;
+  color: white;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 1rem;
+}
+.time{
+  text-align: center;
+  font-size: 5rem;
+  width: 100%;
+}
+.btn{
+  margin-top: 1rem;
+  width: 30%;
+  background-color: ghostwhite;
+  color: #353535;
+  font-size: 1.5rem;
+  padding: 0.5rem 1rem;
+}
+.laps{
+  display: flex;
+  flex-wrap: wrap;
+  color: #353535;
+  font-size: 1rem;
+  width: 30rem;
+}
+.lap-items{
+  width: 100%;
+}

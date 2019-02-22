@@ -1,0 +1,39 @@
+*{
+  list-style: none;
+  display: block;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.image-gallery{
+  display: flex;
+  flex-wrap: wrap;
+  padding: 1rem;
+  width: 60%;
+  max-width: 1280px;
+}
+
+.preview, .fullview{
+  border: 5px solid white;
+  border-radius: 2px;
+  box-shadow: 0 2px 5px gray;
+}
+
+.preview{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 0.625rem;
+}
+
+.main-img, .img{
+  width: 100%;
+}
+
+.item{
+  width: 16%;
+}
+
+.highlighted {
+  box-shadow: 0 0 30px 2px yellow;
+}
