@@ -1,0 +1,89 @@
+@import url(https://fonts.googleapis.com/css?family=Caveat);
+/* @import url(https://fonts.googleapis.com/css?family=Roboto+Slab); */
+@import url(https://fonts.googleapis.com/css?family=Roboto);
+
+*{
+    margin: 0 auto;
+    padding: 0;
+    color: rgb(15, 15, 14);
+}
+
+body {
+    background-image: url(https://cdn.pixabay.com/photo/2015/06/02/12/59/narrative-794978_1280.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 90%;
+}
+
+.text-wrapper {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    text-align: center;
+    height: 75vh;
+}
+
+.title-wrapper {
+    height: 50%;
+}
+
+.wishline-wrapper {
+    height: 50%;
+    display: flex;
+    align-items: center;
+}
+
+.buttons-wrapper {
+    width: 100%;
+    height: 25vh;
+}
+
+.title {
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto Slab', serif;
+    font-size: 8vh;
+    background-image: url(https://cdn.pixabay.com/photo/2015/06/02/12/59/narrative-794978_1280.jpg);
+}
+
+.subtitle {
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto Slab', serif;
+
+    font-size: 5vh;
+    margin-top: 3%;
+    background-image: url(https://cdn.pixabay.com/photo/2015/06/02/12/59/narrative-794978_1280.jpg);
+}
+
+.wish-line {
+    font-family: 'Caveat', cursive;
+    font-size: 15vh;
+    line-height: 12vh;
+    color: orange;
+    text-shadow: 4px 4px rgb(224, 63, 4);
+    width: 100%;
+}
+
+.btn-large {
+    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Roboto Slab', serif;
+
+    font-size: 5vh;
+    display: block;
+    margin-top: 2rem;
+    background-image: url(https://cdn.pixabay.com/photo/2015/06/02/12/59/narrative-794978_1280.jpg);
+}
+
+.btn-small {
+    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Roboto Slab', serif;
+
+    font-size: 3vh;
+    display: block;
+    margin-top: 1.5rem;
+    background-image: url(https://cdn.pixabay.com/photo/2015/06/02/12/59/narrative-794978_1280.jpg);
+}
