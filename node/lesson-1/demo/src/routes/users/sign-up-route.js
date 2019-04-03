@@ -7,6 +7,8 @@ const signUpRoute = (request, response) => {
 
   if (request.method === 'POST') {
 
+    
+
     // sample incoming data:
     // {
     //   "username": "John",
