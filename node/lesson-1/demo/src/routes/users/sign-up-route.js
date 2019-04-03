@@ -1,37 +1,58 @@
 const qs = require('querystring');
+const fs = require('fs');
+const path = require('path');
 
-const saveUser = user => {
-  // получить файл с юзером
-  // найти путь папки users
-  // сохранить туда файл
-};
 
 const signUpRoute = (request, response) => {
-  // Взять данные что пришли
 
   if (request.method === 'POST') {
+
+    // sample incoming data:
+    // {
+    //   "username": "John",
+    //   "telephone": "063 777 77 77",
+    //   "password": "12345",
+    //   "email": "john@gmail.com"
+    //  }
+ 
     let body = '';
 
-    request.on('data', function (data) {
-      body = body + data;
-
-      console.log('Incoming data!!!!');
+    request.on('data', function (incomingData) {
+      body = body + incomingData;
+      console.log('Incoming data');
     });
 
     request.on('end', function () {
-      const post = qs.parse(body);
-      console.log(post);
+
+      console.log('data body', JSON.parse(body));
+
+      const userData = JSON.parse(body); 
+
+      saveUser(userData);
+
+      const responseData = {
+        status: 'success',
+        user: userData,
+      }
+      
+      response.writeHead (200, {'Content-Type': 'application/json'});
+      response.write(JSON.stringify(responseData));
+      response.end();
+
     });
-  }
 
-  // Взять username с данных, сохранить в переменную
+    const saveUser = user => {
 
-  // Сохраняем данные в <username>.json
+      const filePath = path.join(__dirname, '../../database/users', `${user.username}.json`);
 
-  // Сохранить <username>.json в папку users
-
-  // Отправляем файл в ответе с данными юзера
-  // использовать response
+      fs.writeFile(filePath, JSON.stringify(user), function (err) {
+        if (err) throw err;
+        console.log('Saved');
+      });
+    
+    };
+  
+  };
 };
 
 module.exports = signUpRoute;
